@@ -1,0 +1,28 @@
+<head>
+<script type="text/javascript">
+function cekuser(a) {
+re = /^[A-Za-z]{1,}$/;<!--nama harus berupa huruf,--!>
+return re.test(a);
+}
+
+function validasi() //function validasi
+{
+var nama = document.getElementById("nama").value; //inisialisasi variabel nama, diambil dari id input nama
+
+if(nama == "") //validasi nama tidak boleh kosong
+{
+alert("nama harus diisi");
+}
+
+else if (!cekuser(nama)) {
+alert("Nama harus berupa HURUF semua......!! ");
+nama.focus();
+return false;
+}
+else{
+alert("gitu donk");
+}
+
+}
+</script>
+</head>
